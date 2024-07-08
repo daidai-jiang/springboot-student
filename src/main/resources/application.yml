@@ -1,0 +1,40 @@
+server:
+  # 项目端口号
+  port: 8080
+  # 项目访问路径
+  servlet:
+    context-path: /stu
+
+
+spring:
+  # 数据库连接
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/myschool
+    username: root
+    password: root
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+
+# mybatis配置
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: false
+
+
+
+
+#pagehelper:
+#  #标识是哪一种数据库
+#  helper-dialect: mysql
+#  #启用合理化，如果pageNum<1会查询第一页，如果pageNum>pages会查询最后一页
+#  reasonable: true
+#  supportMethodsArguments: true
+#  params: count=countSql
+
+
+
+
